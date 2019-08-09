@@ -48,6 +48,7 @@ Edit this document to include your answers after each question. Make sure to lea
 
     Components are reusable pieces of code, and make building different elements that have the same function and styles easier and more efficient or DRY.
 
+
 ### Git Set up
 
 * [ ] Fork the project into your GitHub user account
