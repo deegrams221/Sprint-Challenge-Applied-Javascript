@@ -13,14 +13,14 @@ window.addEventListener('load', (e) => {
 
     function Header() {
         // define new elements
-        const headerContainer = document.querySelector('.header-container');
+
         const header = document.createElement('div');
         const headerDate = document.createElement('span');
         const headerTitle = document.createElement('h1');
         const headerTemp = document.createElement('span');
 
         // structure setup (append elements)
-        headerContainer.appendChild(header);
+
         header.appendChild(headerDate);
         header.appendChild(headerTitle);
         header.appendChild(headerTemp);
@@ -38,4 +38,8 @@ window.addEventListener('load', (e) => {
         // return
         return header;
     }
+
+    const headerContainer = document.querySelector('.header-container');
+    let menu = new Header();
+    headerContainer.appendChild(menu);
 });
