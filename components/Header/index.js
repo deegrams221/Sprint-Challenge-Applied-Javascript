@@ -25,9 +25,9 @@ function Header() {
     header.appendChild(headerTemp);
 
     // set content
-    headerDate.textContent = `${date}`;
-    headerTitle.textContent = `${h1}`
-    headerTemp.textContent = `${temp}`;
+    headerDate.textContent = `SMARCH 28, 2019`;
+    headerTitle.textContent = `Lambda Times`
+    headerTemp.textContent = `98°`;
 
     // set class names
     header.classList.add('header');
