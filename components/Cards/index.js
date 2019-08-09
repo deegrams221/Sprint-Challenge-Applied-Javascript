@@ -20,17 +20,21 @@
 
 window.addEventListener('load', (e) => {
 
+    let cardsContainer = document.querySelector(".cards-container");
+
     axios.get('https://lambda-times-backend.herokuapp.com/articles')
-        .then((response) => {
-            console.log(response)
-            Object.entries(response.data.articles).forEach((item) => {
-                item.forEach((item) => {
-                    let cardsContainer = document.querySelector(".cards-container");
-                });
-            });
+        .then((axiosData) => {
+            console.log(axiosData);
+            cardMaker(axiosData.data.articles);
         });
 
-        
+    const cardMaker = ((obj) => {
+        for(let key in obj) {
+            obj[key].forEach((article) => {
+                cardsContainer.appendChild(createArticle(article));
+            });
+        }
+    })    
     const createArticle = ((data) => {
         // define new elements
         const card = document.createElement('div');
